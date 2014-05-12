@@ -1,5 +1,9 @@
 /*SWEET STYLIN'*/
 
+.extra {
+  color: red;
+}
+
 body {
   background-color: #0B486B;
   font-family: "Bodoni MT";
@@ -333,3 +337,4 @@ li.sound-choices {
 .iconmelon:hover {
   cursor:pointer;
 }
+
