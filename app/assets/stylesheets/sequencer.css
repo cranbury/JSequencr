@@ -344,3 +344,10 @@ li.sound-choices {
     height: 1em;
   }
 }
+
+@media only screen and (max-device-width: 690px) {
+   div.note {
+    width: 1em;
+    height: 1em;
+  } 
+}
