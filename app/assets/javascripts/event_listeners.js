@@ -111,7 +111,7 @@ function addBadLoginAlert(message){
 function loadUserSongsListener() {
   $(".list-songs").on("click", function() {
     console.log("load clicked");
-    $("button ul li").remove();
+    $("div ul li").remove();
     $(".page-overlay").css("display", "block");
     listUserSongs();
   })
