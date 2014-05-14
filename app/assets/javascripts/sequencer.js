@@ -26,13 +26,13 @@ $( ".slider" ).on( "slide", function( event, ui ) {
 
 // Looping function
 function gridCycle(){
-  var columnCount = $("div.sequencer-column").length;
-  $("div.sequencer-column").children().removeClass("in-time");
+  var columnCount = $("button.sequencer-column").length;
+  $("button.sequencer-column").children().removeClass("in-time");
   if (intervalCounter > columnCount - 1) {
     intervalCounter = 0;
   }
   // console.log(intervalCounter);
-  $("div#column" + intervalCounter).children().toggleClass("in-time");
+  $("button#column" + intervalCounter).children().toggleClass("in-time");
   playSelectedNotes();
   intervalCounter++;
 }

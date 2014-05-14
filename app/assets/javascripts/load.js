@@ -3,13 +3,13 @@ $("body").on("click", ".song-choices", function(){
   $(".suite-wrapper").children("#drop-column").children().remove();
   var thisId = $(this).attr("data-song-id");
   loadSong(thisId);
-  $("div ul li").remove();
+  $("button ul li").remove();
   $(".page-overlay").css("display", "none");
   listSoundChoices();
 });
 
 $(".exit-button").on("click", function(){
-  $("div ul li").remove();
+  $("button ul li").remove();
   listSoundChoices();
 });
 
@@ -91,7 +91,7 @@ function loadRows(){
     
     if ( rowCount > 0) {  //if there are existing columns add a the new notes to each column
       $.each(allColumns, function(index, column){
-        newNote = $("<div>").addClass("note row" + rowCount).attr("data-sound", newSound);
+        newNote = $("<button>").addClass("note row" + rowCount).attr("data-sound", newSound);
         if (loadedPatternsArray()[j][index] === "1") {
           newNote.addClass("selected");
         }
@@ -102,11 +102,11 @@ function loadRows(){
       $(includeX).attr("id", rowCount).appendTo("#drop-column");
     } else {  //create the same number of columns determined by the songLength variable and add the notes to the columns
         for (var i = 0; i < songLength; i++){
-          newNote = $("<div>").addClass("note row" + rowCount).attr("data-sound", newSound);
+          newNote = $("<button>").addClass("note row" + rowCount).attr("data-sound", newSound);
           if (loadedPatternsArray()[j][i] === "1") {
             newNote.addClass("selected");
           }
-          $('.suite-wrapper').append($("<div class='sequencer-column' id='column"+ i + "'>").append(newNote));
+          $('.suite-wrapper').append($("<button class='sequencer-column' id='column"+ i + "'>").append(newNote));
         }
       newSoundTitle = $("<h3>").addClass("sound-title").attr("name", rowCount).text(newSound);
       $(newSoundTitle).appendTo("#drop-column");

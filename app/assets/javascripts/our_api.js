@@ -35,7 +35,7 @@ function setOverlayEventListenersFromPlus(){
 
     if ( rowCount > 0) {  //if there are existing columns add a the new notes to each column
       $.each(allColumns, function(index, column){
-        newNote = $("<div>").addClass("note row" + (parseInt(lastRowNumber)+1)).attr("data-sound", newSound);
+        newNote = $("<button>").addClass("note row" + (parseInt(lastRowNumber)+1)).attr("data-sound", newSound);
         $(column).append(newNote);
       });
       newSoundTitle = $("<h3>").addClass("sound-title").attr("name", (parseInt(lastRowNumber)+1)).text(newSound);
@@ -46,8 +46,8 @@ function setOverlayEventListenersFromPlus(){
     } else {  //create the same number of columns determined by the songLength variable and add the notes to the columns
       
       for (var i = 0; i < songLength; i++){
-        newNote = $("<div>").addClass("note row" + globalRowCounter).attr("data-sound", newSound);
-        $('.suite-wrapper').append($("<div class='sequencer-column' id='column"+ i + "'>").append(newNote));
+        newNote = $("<button>").addClass("note row" + globalRowCounter).attr("data-sound", newSound);
+        $('.suite-wrapper').append($("<button class='sequencer-column' id='column"+ i + "'>").append(newNote));
       }
         newSoundTitle = $("<h3>").addClass("sound-title").attr("name", globalRowCounter).text(newSound);
       $(newSoundTitle).appendTo("#drop-column");
@@ -80,7 +80,7 @@ function settupSequencer() {
   $(".suite-wrapper").children("#drop-column").children().remove();
   var suiteWrapper = $("suite-wrapper");
   for (var col = 0; col < songLength; col++) {
-    $('.suite-wrapper').append($("<div class='sequencer-column' id='column"+ col+ "'>"));
+    $('.suite-wrapper').append($("<button class='sequencer-column' id='column"+ col+ "'>"));
   }
 
   var rowCounter = 0;
@@ -90,7 +90,7 @@ function settupSequencer() {
     soundTitle.attr("name", rowCounter).appendTo('#drop-column');
     
     for (var i = 0; i < songLength; i++) {
-      $("#column" + i).append($("<div class='note row" + rowCounter +"' data-sound=" + key + ">"));
+      $("#column" + i).append($("<button class='note row" + rowCounter +"' data-sound=" + key + ">"));
     }
     rowCounter++;
   }

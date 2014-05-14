@@ -1,6 +1,6 @@
 
 function saveRows() {
-  var rows = $("div.sequencer-column").length;
+  var rows = $("button.sequencer-column").length;
   for(var i=0; i < rows; i++){
   saveSoundPattern(i);
   }

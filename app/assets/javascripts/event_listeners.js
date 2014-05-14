@@ -1,7 +1,7 @@
 //Settup Eventlisteners for General Functionality
 function triggerEventListeners(){
   //all notes can be selected
-  $("body").on("click", "div.note", function(){
+  $("body").on("click", "button.note", function(){
     $(this).toggleClass("selected");
   });
   //start&pause button starts and pauses timer
@@ -111,7 +111,7 @@ function addBadLoginAlert(message){
 function loadUserSongsListener() {
   $(".list-songs").on("click", function() {
     console.log("load clicked");
-    $("div ul li").remove();
+    $("button ul li").remove();
     $(".page-overlay").css("display", "block");
     listUserSongs();
   })
