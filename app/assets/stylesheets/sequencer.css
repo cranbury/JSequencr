@@ -5,8 +5,17 @@
 }
 
 body {
-  background-color: #0B486B;
+  background: rgb(167,207,223); /* Old browsers */
+  background: -moz-linear-gradient(45deg,  rgba(167,207,223,1) 0%, rgba(35,83,138,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(167,207,223,1)), color-stop(100%,rgba(35,83,138,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* IE10+ */
+  background: linear-gradient(45deg,  rgba(167,207,223,1) 0%,rgba(35,83,138,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
   font-family: "Bodoni MT";
+
 }
 
 
@@ -74,11 +83,12 @@ h1 {
 }
 
 h1, h3, h4 {
-  color: #79BD9A;
+  color: white;
   letter-spacing: .07em;
   margin-left: .4em;
   font-weight: 300;
   font-family: 'Muli', sans-serif;
+
 }
 
 h4 {
@@ -90,7 +100,7 @@ h3 {
 }
 
 input {
-  background-color: #79BD9A;
+  background-color: inherit;
   border: none;
   border-radius: .2em;
   margin-left: .5em;
@@ -111,12 +121,16 @@ form label {
 button, .button {
   border: none;
   color: white;
-  background-color: #79BD9A;
+  background-color: inherit;
   padding: .5em 1em;
   border-radius: .5em;
   font-weight: 200;
   margin-left: 1em;
   font-family: helvetica;
+}
+
+button:hover {
+  color: rgb(121, 138, 133);
 }
 
 label {
@@ -188,7 +202,7 @@ li.sound-choices {
   display: inline;
   width: 100%;
   float: left;
-  background-color: #0B486B;
+  background-color: inherit;
   margin: 1em;
 }
 
@@ -241,6 +255,11 @@ li.sound-choices {
   display: inline-block;
 }
 
+.remove-row:hover {
+    color: rgb(121, 138, 133);
+    border:   rgb(121, 138, 133);
+}
+
 .column {
   float: left;
 }
@@ -253,7 +272,15 @@ li.sound-choices {
   width: 5em;
   height: 5em;
   display: block;
-  background-color: #3B8686;
+  background-color: rgb(96,108,136); /* Old browsers */
+  background-color: -moz-linear-gradient(45deg,  rgba(96,108,136,1) 0%, rgba(63,76,107,1) 100%); /* FF3.6+ */
+  background-color: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(96,108,136,1)), color-stop(100%,rgba(63,76,107,1))); /* Chrome,Safari4+ */
+  background-color: -webkit-linear-gradient(45deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Chrome10+,Safari5.1+ */
+  background-color: -o-linear-gradient(45deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* Opera 11.10+ */
+  background-color: -ms-linear-gradient(45deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* IE10+ */
+  background-color: linear-gradient(45deg,  rgba(96,108,136,1) 0%,rgba(63,76,107,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606c88', endColorstr='#3f4c6b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
   border: .25em solid black;
   border-radius: 1em;
   -webkit-user-select: none;
@@ -262,8 +289,22 @@ li.sound-choices {
   user-select: none;
 }
 
+.note:hover {
+  cursor: pointer;
+
+  background-color: rgb(121, 138, 133);;
+}
+
 .selected {
-  background-color: #703832;
+  background-color: rgb(169,228,247); /* Old browsers */
+  background-color: -moz-linear-gradient(45deg,  rgba(169,228,247,1) 0%, rgba(15,180,231,1) 100%); /* FF3.6+ */
+  background-color: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(169,228,247,1)), color-stop(100%,rgba(15,180,231,1))); /* Chrome,Safari4+ */
+  background-color: -webkit-linear-gradient(45deg,  rgba(169,228,247,1) 0%,rgba(15,180,231,1) 100%); /* Chrome10+,Safari5.1+ */
+  background-color: -o-linear-gradient(45deg,  rgba(169,228,247,1) 0%,rgba(15,180,231,1) 100%); /* Opera 11.10+ */
+  background-color: -ms-linear-gradient(45deg,  rgba(169,228,247,1) 0%,rgba(15,180,231,1) 100%); /* IE10+ */
+  background-color: linear-gradient(45deg,  rgba(169,228,247,1) 0%,rgba(15,180,231,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#0fb4e7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 
 .in-time {
@@ -302,6 +343,10 @@ li.sound-choices {
   cursor: pointer;
 }
 
+#song-title {
+  background-color: white;
+}
+
 
 .clickable-links {
   -webkit-transition: color .1s ease-out .1s;
@@ -311,7 +356,7 @@ li.sound-choices {
 }
 
 .clickable-links:hover {
-  color: #99D4F6;
+  color: rgb(121, 138, 133);
 }
 
 .clickable-buttons {
@@ -322,12 +367,12 @@ li.sound-choices {
 }
 
 .clickable-buttons:hover {
-  color: #0B486B;
+  color: rgb(121, 138, 133);
 }
 .iconmelon {
   display:inline-block;
-  width:2em;
-  height:2em;
+  width:5em;
+  height:5em;
   fill: white;
   margin:.5em;
   margin-right: 2em;
@@ -336,6 +381,14 @@ li.sound-choices {
 
 .iconmelon:hover {
   cursor:pointer;
+}
+
+svg:hover { 
+  fill: rgb(121, 138, 133);
+   }
+
+#controls {
+  margin: auto;
 }
 
 @media (max-width: 600px) {
