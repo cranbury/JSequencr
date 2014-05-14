@@ -338,3 +338,9 @@ li.sound-choices {
   cursor:pointer;
 }
 
+@media (max-width: 600px) {
+  div.note {
+    width: 1em;
+    height: 1em;
+  }
+}
