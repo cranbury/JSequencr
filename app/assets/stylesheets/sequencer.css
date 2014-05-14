@@ -340,14 +340,14 @@ li.sound-choices {
 
 @media (max-width: 600px) {
   div.note {
-    width: 1em;
-    height: 1em;
+    width: 3em;
+    height: 3em;
   }
 }
 
 @media only screen and (max-device-width: 690px) {
    div.note {
-    width: 1em;
-    height: 1em;
+    width: 3em;
+    height: 3em;
   } 
 }
