@@ -345,6 +345,7 @@ li.sound-choices {
 
 #song-title {
   background-color: white;
+  color: black;
 }
 
 
@@ -383,9 +384,10 @@ li.sound-choices {
   cursor:pointer;
 }
 
+
 svg:hover { 
   fill: rgb(121, 138, 133);
-   }
+}
 
 #controls {
   margin: auto;
